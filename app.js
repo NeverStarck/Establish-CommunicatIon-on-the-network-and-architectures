@@ -8,7 +8,6 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var languagesRouter = require("./routes/languages");
 
-
 var app = express();
 
 // view engine setup
@@ -27,14 +26,13 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/languages", languagesRouter);
 
-
 app.get("/test", (request, response) => {
   response.send("this is a set");
 });
 
 let usersList = express();
 usersList.get("/", (request, response) => {
-  response.send("This is the list of users section")
+  response.send("This is the list of users section");
 });
 
 let permissions = express();
